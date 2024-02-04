@@ -1,0 +1,12 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: mono
+  labels:
+    type: mono
+spec:
+  containers:
+    - name: mono-pod
+      image: vishalsoni2017/monolith:2.0.0
+      ports:
+        - containerPort: 8080

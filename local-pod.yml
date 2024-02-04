@@ -1,0 +1,10 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: myapp
+spec:
+  containers:
+    - name: echo-os
+      image: echo-os:v1.0
+      command: ["sleep"]  #to overide the entrypoint
+      args: ["10"]    #to overide the CMD

@@ -1,0 +1,13 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: server2
+  labels:
+    tier: frontend
+spec:
+  containers:
+    - name: nginxserver2  
+      image: nginx
+      ports:
+        - containerPort: 80
+        

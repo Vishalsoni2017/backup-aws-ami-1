@@ -1,0 +1,12 @@
+kind: Job
+apiVersion: batch/v1
+metadata:
+  name: myapp-job
+spec:
+  template:
+    spec:
+      containers:
+        - name: cal
+          image: centos
+          command: ["expr","5","+","6"]
+      restartPolicy: Never

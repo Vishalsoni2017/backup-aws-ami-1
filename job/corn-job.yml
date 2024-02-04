@@ -1,0 +1,17 @@
+kind: CronJob
+apiVersion: batch/v1
+metadata:
+  name: cron-job-app
+spec:
+  schedule: "*/1 * * * *"
+  jobTemplate:
+    spec:
+      completions: 3
+      parallelism: 3
+      template:
+        spec:
+          containers:
+            - name: os-pod
+              image: centos
+              command: ["expr","3","+","5"]
+          restartPolicy: Never

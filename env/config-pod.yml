@@ -1,0 +1,12 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: myapp
+spec:
+  containers:
+    - name: env-pod
+      image: centos
+      command: ["ping","localhost"]
+      envFrom:
+        - configMapRef:
+            name: app-config

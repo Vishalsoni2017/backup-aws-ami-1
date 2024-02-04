@@ -1,0 +1,11 @@
+kind: Service
+apiVersion: v1
+metadata: 
+  name: mono-service
+spec:
+  ports:  
+    - port: 8080
+      targetPort: 8080
+  type: ClusterIP
+  selector:
+    type: mono

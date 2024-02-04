@@ -1,0 +1,14 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: app
+
+spec:
+  securityContext:
+    runAsUser: 1001
+  containers:
+    - name: app-c
+      image: centos
+      command: ["ping","localhost"]
+
+

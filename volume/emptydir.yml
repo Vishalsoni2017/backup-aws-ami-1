@@ -1,0 +1,18 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: myapp-volume
+
+spec:
+  containers:
+    - name: server
+      image: nginx
+      volumeMounts:
+        - name: empvol
+          mountPath: "/tmp/vol1"
+          
+
+
+  volumes:
+    - name: empvol
+      emptyDir: {}  

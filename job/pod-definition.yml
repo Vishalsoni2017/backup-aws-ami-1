@@ -1,0 +1,10 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: myapp
+spec:
+  containers:
+    - name: myapp-pod
+      image: centos
+      command: ["expr","3","+","5"]
+  restartPolicy: Never

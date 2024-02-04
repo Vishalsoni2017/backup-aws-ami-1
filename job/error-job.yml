@@ -1,0 +1,12 @@
+kind: Job
+apiVersion: batch/v1
+metadata:
+  name: myapp-error
+spec:
+  completions: 3
+  template: 
+    spec:
+      containers:
+        - name: error
+          image: kodekloud/random-error
+      restartPolicy: Never

@@ -1,0 +1,9 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: app-os
+spec:
+  containers:
+    - name: app-os
+      image: ubuntu
+      command: ["/bin/bash","-c","while true;do echo 'hi';done"]
